@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
   entry: {
-		clique: "./src/clique.js"
+		clique: "./src/js/clique.js"
   },
   output: {
     path: path.resolve(__dirname, "client/js"),

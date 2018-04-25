@@ -7,6 +7,7 @@ window.CliqueSite = window.CliqueSite || (function(){
       new Vue({
         el: args.el,
         data: {
+          work: [],
         },
         mounted() {
           let vm = this
