@@ -5,7 +5,8 @@
 }
 
 @mixin section-layout {
-  min-height: 515px;
+  /*min-height: 515px;*/
+  min-height: 650px;
 }
 @mixin layout-reset {
   margin: 0;

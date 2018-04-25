@@ -2,13 +2,22 @@
 @import 'fonts';
 @import 'colors';
 
+@mixin tag {
+  background-color: rgba(255,255,255,.3);
+  border-radius: 3px;
+  padding: .5em;
+}
+
 html, body {
   margin: 0;
   padding: 0;
+  font-size: $fs-medium;
+  color: $primary-font-color;
 }
 
 #header {
   @include section-layout;
+  min-height: 100vh; 
   background-image: url('../img/header.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,12 +47,13 @@ html, body {
 .header__info__primary__links li a {
   color: $primary-font-color;
   padding: 0 0 20px 0;
+  font-size: $fs-small;
   font-weight: bold;
   text-decoration: none;  
 }
 
 .header__info__primary__links li a:hover {
-  border-bottom: 3px solid $brand-color;
+  border-bottom: 2px solid $brand-color;
 }
 
 .header__info__primary__logo {
@@ -66,11 +76,53 @@ html, body {
   display: flex;
   justify-content: flex-start;
 }
+
 .header__info__secondary__phone {
   @include accent-text;
+  @include tag;
   color: $primary-font-color;
-  background-color: rgba(255,255,255,.2);
-  border-radius: 5px;
-  padding: .5em;
   font-size: $fs-medium;
+}
+.header__callout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 140px 0px 140px;
+  height: 360px;
+  height: 50vh;
+  font-size: $fs-xxlarge;
+  color: $primary-font-color;
+  @include accent-text;
+}
+.header__callout span.callout__tag {
+  @include body-text;
+  @include tag;
+  @include declare;
+  font-size: 30px;;
+  font-weight: bold;
+  padding: .3em;
+}
+.header__callout__text {
+  @include body-text;
+  @include declare;
+  font-weight: bold;
+  font-size: $fs-large;
+}
+.header__callout__text span {
+  padding-bottom: .4em;
+  border-bottom: 2px solid $primary-font-color;
+}
+
+.header__action {
+  @include flex-center;
+  height: 20vh;
+  padding: 0px 140px 0px 140px;
+  font-size: $fs-large;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header__action svg {
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid $primary-font-color;
 }

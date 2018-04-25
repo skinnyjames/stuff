@@ -5,10 +5,14 @@ html, body {
 
 html, body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-size: 15px;
+  color: #ffffff; }
 
 #header {
-  min-height: 515px;
+  /*min-height: 515px;*/
+  min-height: 650px;
+  min-height: 100vh;
   background-image: url("../img/header.png");
   background-repeat: no-repeat;
   background-size: cover; }
@@ -35,11 +39,12 @@ html, body {
 .header__info__primary__links li a {
   color: #ffffff;
   padding: 0 0 20px 0;
+  font-size: 12px;
   font-weight: bold;
   text-decoration: none; }
 
 .header__info__primary__links li a:hover {
-  border-bottom: 3px solid #f88601; }
+  border-bottom: 2px solid #f88601; }
 
 .header__info__primary__logo {
   display: flex;
@@ -63,8 +68,54 @@ html, body {
 
 .header__info__secondary__phone {
   font-family: 'Crimson Text', serif;
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
   padding: .5em;
+  color: #ffffff;
   font-size: 15px; }
+
+.header__callout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 140px 0px 140px;
+  height: 360px;
+  height: 50vh;
+  font-size: 60px;
+  color: #ffffff;
+  font-family: 'Crimson Text', serif; }
+
+.header__callout span.callout__tag {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  padding: .5em;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  padding: .3em; }
+
+.header__callout__text {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px; }
+
+.header__callout__text span {
+  padding-bottom: .4em;
+  border-bottom: 2px solid #ffffff; }
+
+.header__action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  padding: 0px 140px 0px 140px;
+  font-size: 20px;
+  justify-content: flex-start;
+  align-items: center; }
+
+.header__action svg {
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ffffff; }
