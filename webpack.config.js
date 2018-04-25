@@ -4,7 +4,7 @@ module.exports = {
 		clique: "./src/clique.js"
   },
   output: {
-    path: path.resolve(__dirname, "client"),
+    path: path.resolve(__dirname, "client/js"),
     filename: "[name].js"
   },
   module: {
