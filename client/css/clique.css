@@ -118,4 +118,13 @@ html, body {
 .header__action svg {
   padding: 10px;
   border-radius: 3px;
-  border: 1px solid #ffffff; }
+  border: 1px solid #ffffff;
+  animation: bounce 1s infinite; }
+
+@keyframes bounce {
+  0% {
+    margin-top: -5px; }
+  50% {
+    margin-top: 5px; }
+  100% {
+    margin-top: -5px; } }
