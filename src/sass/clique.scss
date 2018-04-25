@@ -17,7 +17,7 @@ html, body {
 
 #header {
   @include section-layout;
-  min-height: 100vh; 
+  min-height: 100%; 
   background-image: url('../img/header.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,14 +46,21 @@ html, body {
 
 .header__info__primary__links li a {
   color: $primary-font-color;
-  padding: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
   font-size: $fs-small;
   font-weight: bold;
   text-decoration: none;  
 }
 
-.header__info__primary__links li a:hover {
-  border-bottom: 2px solid $brand-color;
+.header__info__primary__links li a:after {
+  @include animated-link;
+  background-color: $brand-color;
+}
+.header__info__primary__links li a:hover:after {
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 .header__info__primary__logo {
@@ -89,7 +96,7 @@ html, body {
   justify-content: space-between;
   padding: 20px 140px 0px 140px;
   height: 360px;
-  height: 50vh;
+  height: 50%;
   font-size: $fs-xxlarge;
   color: $primary-font-color;
   @include accent-text;

@@ -5,6 +5,19 @@ $fs-large: 20px;
 $fs-xlarge: 40px;
 $fs-xxlarge: 60px;
 
+@mixin animated-link {
+  content: '';
+  display: inline-block;
+  position: absolute; 
+  width: 100%;
+  height: 2px;
+  margin-top: 20px;
+  margin-left: 0;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all .2s ease-in-out 0s;
+}
+
 @mixin declare {
   text-transform: uppercase;
 }
