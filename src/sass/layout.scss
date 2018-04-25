@@ -1,0 +1,21 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin section-layout {
+  min-height: 515px;
+}
+@mixin layout-reset {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Banner */
+
+
+
+/* Sections */
+
+
