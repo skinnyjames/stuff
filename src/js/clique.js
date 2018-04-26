@@ -9,14 +9,29 @@ window.CliqueDemo = window.CliqueDemo || (function(){
         data: {
           mobileMenu: false,
           work: [],
+          media: im,
         },
-        beforeCreate() {
-          im.setElement(document.body)
+        beforeMount() {
+          let vm = this
+          this.media.setElement(document.body)
+          this.media.setUpdateMode('manual')
+          window.onresize = (e) => {
+            if (vm.media.greaterThan('tablet')) {
+              vm.mobileMenu = false
+            }     
+            vm.media.update()
+            vm.$forceUpdate()
+  
+          }
+        },
+        mounted() {
         },
         computed: {
+        },
+        methods: {
           getMenuClass() {
             var active = false
-            if (im.lessThan('tablet') && this.mobileMenu) {
+            if (this.media.lessThan('tablet') && this.mobileMenu) {
               active = true  
             }
             return {
@@ -24,11 +39,6 @@ window.CliqueDemo = window.CliqueDemo || (function(){
               'header__info__primary__links--active': active
             }
           },
-        },
-        methods: {
-          resize(e) {
-            console.log(im.getActive());
-          }
         },
       })
     }
