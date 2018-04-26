@@ -14,17 +14,18 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="http://mycloudcdn.com/graphics/skrollr/dist/skrollr.min.js"></script>
-    <script src="clique.js"></script>
+    <script src="js/vendor/include-media.min.js"></script>
+    <script src="js/clique.js"></script>
   </head>
   <body>
     <div id="clique-app">
       <div id="header">
         <div class="header__info">
           <nav class="header__info__primary">
-            <div class="header__info__primary__logo">
+            <div @click="mobileMenu = true" class="header__info__primary__logo">
               <a href="#">Clique</a>
             </div>
-            <ul class="header__info__primary__links">
+            <ul :class="getMenuClass">
               <li>
                 <a href="#work">Work</a>
               </li>
@@ -43,6 +44,7 @@
               <li>
                 <a href="#contact">Contact</a>
               </li>
+              <li  @click="mobileMenu = false" class="header__info__primary__links--close">&times</a>
             </ul>
           </nav>
           <div class="header__info__secondary">
@@ -65,5 +67,9 @@
         </div>
       </div>
     </div>
+    <script>
+      CliqueDemo.init({ el: '#clique-app'});
+      im.setElement(document.body);
+    </script>
   </body>
 </html>

@@ -12,7 +12,7 @@ html, body {
 #header {
   /*min-height: 515px;*/
   min-height: 650px;
-  min-height: 100vh;
+  min-height: 100%;
   background-image: url("../img/header.png");
   background-repeat: no-repeat;
   background-size: cover; }
@@ -38,13 +38,38 @@ html, body {
 
 .header__info__primary__links li a {
   color: #ffffff;
-  padding: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
   font-size: 12px;
   font-weight: bold;
   text-decoration: none; }
 
-.header__info__primary__links li a:hover {
-  border-bottom: 2px solid #f88601; }
+.header__info__primary__links li a:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  margin-top: 20px;
+  margin-left: 0;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all .2s ease-in-out 0s;
+  background-color: #f88601; }
+
+.header__info__primary__links li a:hover:after {
+  visibility: visible;
+  transform: scaleX(1); }
+
+.header__info__primary__links--close {
+  display: none; }
+
+.header__info__primary__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px; }
 
 .header__info__primary__logo {
   display: flex;
@@ -52,10 +77,13 @@ html, body {
   justify-content: center;
   text-transform: uppercase;
   background-color: #f88601;
-  width: 110px;
-  height: 110px;
+  min-width: 110px;
+  min-height: 110px;
+  max-width: 110px;
+  max-height: 110px;
   font-size: 16px;
-  font-weight: bold; }
+  font-weight: bold;
+  z-index: 9; }
 
 .header__info__primary__logo a {
   text-decoration: none;
@@ -64,7 +92,8 @@ html, body {
 .header__info__secondary {
   width: 150px;
   display: flex;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  z-index: 9; }
 
 .header__info__secondary__phone {
   font-family: 'Crimson Text', serif;
@@ -80,7 +109,7 @@ html, body {
   justify-content: space-between;
   padding: 20px 140px 0px 140px;
   height: 360px;
-  height: 50vh;
+  height: 50%;
   font-size: 60px;
   color: #ffffff;
   font-family: 'Crimson Text', serif; }
@@ -128,3 +157,74 @@ html, body {
     margin-top: 5px; }
   100% {
     margin-top: -5px; } }
+
+@media (min-width: 320px) {
+  body::after {
+    content: '{"phone":{"value": "320px", "active": true}, "tablet":{"value": "768px", "active": false}, "desktop":{"value": "1024px", "active": false}}';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    width: 0; } }
+
+@media (min-width: 768px) {
+  body::after {
+    content: '{"phone":{"value": "320px", "active": true}, "tablet":{"value": "768px", "active": true}, "desktop":{"value": "1024px", "active": false}}';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    width: 0; } }
+
+@media (min-width: 1024px) {
+  body::after {
+    content: '{"phone":{"value": "320px", "active": true}, "tablet":{"value": "768px", "active": true}, "desktop":{"value": "1024px", "active": true}}';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    width: 0; } }
+
+/* Header Banner */
+/* Sections */
+html, body {
+  font-family: 'Open Sans', sans-serif; }
+
+/* test */
+@media (max-width: 768px) {
+  .header__info__primary {
+    background-color: #f88601; }
+  .header__info__primary__links {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    padding-top: 110px;
+    background-color: #f88601;
+    display: none; }
+  .header__info__primary__links--active {
+    display: flex; }
+  .header__info__primary__links li {
+    padding: 15px 0;
+    margin: 0;
+    width: 100%;
+    background-color: #f88601;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .header__info__primary__links li a {
+    height: 100%;
+    margin: .7em 30px; }
+  .header__info__primary__links li a:after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white; }
+  .header__info__primary__links--close {
+    display: flex;
+    font-size: 40px;
+    cusor: pointer; }
+  .header__callout, .header__action {
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 30px; }
+  .header__callout span.callout__tag {
+    font-size: 20px; } }

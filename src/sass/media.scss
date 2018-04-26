@@ -1,0 +1,56 @@
+@import 'vendor/_include-media';
+@import 'vendor/_include-media-export';
+@import 'layout';
+@import 'fonts';
+@import 'colors';
+
+$breakpoints: (phone: 320px, med: 647px, tablet: 768px, desktop: 1024px);
+
+/* test */
+@include media('<=tablet') {
+
+  .header__info__primary {
+    background-color: $brand-color;
+  }
+  .header__info__primary__links {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    padding-top: 110px;
+    background-color: $brand-color;
+    display:none;
+  }
+  .header__info__primary__links--active {
+    display: flex;
+  }
+  .header__info__primary__links li {
+    padding: 15px 0;
+    margin: 0;
+    width: 100%;
+    background-color: $brand-color;
+    @include flex-center;
+  }
+  .header__info__primary__links li a {
+    height: 100%;
+    margin: .7em 30px;
+  }
+  .header__info__primary__links li a:after {
+    @include flex-center;
+    background-color: white;
+  }
+  .header__info__primary__links--close {
+    display: flex;
+    font-size: $fs-xlarge;
+    cusor:pointer;
+  }
+  .header__callout,.header__action {
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+    font-size: $fs-largex;
+  }
+  .header__callout span.callout__tag {
+    font-size: $fs-large;
+  }
+}
