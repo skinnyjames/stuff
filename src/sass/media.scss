@@ -53,4 +53,13 @@ $breakpoints: (phone: 320px, med: 647px, tablet: 768px, desktop: 1024px);
   .header__callout span.callout__tag {
     font-size: $fs-large;
   }
+  .work {
+    flex-direction: column;
+  }
+  .work__details {
+    width: 100%;
+  }
+  .work__details__header, .work__details__body {
+    margin: 0;
+  }
 }

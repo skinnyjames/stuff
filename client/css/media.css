@@ -67,4 +67,10 @@ html, body {
     margin: 0 auto;
     font-size: 30px; }
   .header__callout span.callout__tag {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .work {
+    flex-direction: column; }
+  .work__details {
+    width: 100%; }
+  .work__details__header, .work__details__body {
+    margin: 0; } }

@@ -14,6 +14,7 @@ window.CliqueDemo = window.CliqueDemo || (function(){
           mobileMenu: false,
           works: null,
           media: im,
+          skrollr: null,
         },
         beforeMount() {
           let vm = this
@@ -29,6 +30,7 @@ window.CliqueDemo = window.CliqueDemo || (function(){
           }
         },
         mounted() {
+          // Load Scrollax
           // Load Work Examples File
           let vm = this
           let type = 'GET'
@@ -41,9 +43,17 @@ window.CliqueDemo = window.CliqueDemo || (function(){
           $.ajax({ type, url, dataType, success })
 
         },
+        updated() {
+          // Initialize Skrollr
+        },
         computed: {
         },
         methods: {
+          workMounted() {
+            // Initialize Skrollr
+            skrollr.init()
+        
+          },
           getMenuClass() {
             var active = false
             if (this.media.lessThan('tablet') && this.mobileMenu) {

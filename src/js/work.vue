@@ -2,17 +2,17 @@
 	<div :class="getClass" :style="getStyle">
     <div class="gradient" :style="getGradient"></div>
 		<div class="work__details">
-			<div class="work__details__logo">
-				<img :src="'img/' + work.id + '-logo.png'" >
-			</div>
-			<div class="work__details__summary">
-				<div class="work__details__summary__title" v-html="title">
+      <div class="work__details__header">
+        <div class="work__details__header__logo">
+          <img :src="'img/' + work.id + '-logo.png'" >
+        </div>
+				<div class="work__details__header__title" v-html="title"></div>
+      </div>
+			<div class="work__details__body">
+				<div class="work__details__body__desc" v-html="description">
 				</div>
-				<div class="work__details__summary__desc">
-					{{ work.description }}
-				</div>
+        <a class="work__details__body__view">View Case Study</a>
 			</div>
-			<button class="work__summary__view">View Case Study</button>
 		</div>
 		<div class="work__evidence">
 			<slot></slot>
@@ -23,7 +23,13 @@
 <script>
 module.exports = {
 	props: ['work'],
+  mounted() {
+    this.$emit('mounted')
+  },
 	computed: {
+    description() {
+      return this.work.description.replace(/\n/g, '<br>')
+    },
     title() {
       return this.work.title.replace(/\n/g, '<br>')
     },

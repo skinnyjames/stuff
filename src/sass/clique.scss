@@ -11,12 +11,14 @@
 html, body {
   margin: 0;
   padding: 0;
+  width: 100vw;
+  overflow-x:hidden;
   font-size: $fs-medium;
   color: $primary-font-color;
 }
 
 #header {
-  @include section-layout;
+  height: 650px;
   min-height: 100%; 
   background-image: url('../img/header.png');
   background-repeat: no-repeat;
@@ -174,6 +176,7 @@ html, body {
 .callout__statement {
   font-weight: normal;
   font-size: 48px;
+  margin: 0;
 }
 
 .callout p {
@@ -189,14 +192,55 @@ html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding-left: 140px;
-  justify-content: center;
+  justify-content: flex-start;
 }
-.work__details__summary__title {
+.work__details__header {
+  height: 410px;
+  display: flex;
+  margin-left: 150px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.work__details__header__title {
   @include body-text;
   font-size: 60px;
 }
-.work__details__summary__desc {
+.work__details__body {
+  padding: .3em 0;
+  margin-left: 150px;
+}
+.work__details__body__desc {
   @include accent-text;
+  font-size: $fs-reg;
+}
+.work__details__body__view {
+  @include flex-center;
+  @include declare;
+  @include body-text;
+  letter-spacing: .2em;
+  margin-top: 2em;
+  font-color: $primary-font-color;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 1em .5em; 
+  //TODO: get actual width;
+  width: 200px;
+  font-weight: bold;
+}
+
+.work__evidence {
+  position: relative;
+}
+
+.clique__evidence {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+
+.lincoln-evidence {
+  margin-bottom: -80px;
 }
 @import 'media';
