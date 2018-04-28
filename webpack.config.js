@@ -1,4 +1,5 @@
 const path = require('path');
+const { VueLoaderPlugin } = require('vue-loader')
 module.exports = {
   entry: {
 		clique: "./src/js/clique.js"
@@ -11,7 +12,6 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        exclude: /\.babelrc/,
         use: [ 'vue-loader' ]
       },
       {
@@ -33,5 +33,8 @@ module.exports = {
   externals: {
     jquery: 'jQuery',
     vue: 'Vue',
-  }
+  },
+  plugins: [
+    new VueLoaderPlugin()
+  ]
 };

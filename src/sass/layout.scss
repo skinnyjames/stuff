@@ -4,9 +4,12 @@
   justify-content: center;
 }
 
+@mixin callout-layout {
+  height: 350px;
+}
 @mixin section-layout {
   /*min-height: 515px;*/
-  min-height: 650px;
+  height: 700px;
 }
 @mixin layout-reset {
   margin: 0;

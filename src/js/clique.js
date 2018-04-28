@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import YAML from 'js-yaml'
 
+import Work from './work.vue'
+
+Vue.component('clique-work', Work)
+
 window.CliqueDemo = window.CliqueDemo || (function(){
   return {
     init(args) {
@@ -8,7 +12,7 @@ window.CliqueDemo = window.CliqueDemo || (function(){
         el: args.el,
         data: {
           mobileMenu: false,
-          work: [],
+          works: null,
           media: im,
         },
         beforeMount() {
@@ -25,6 +29,17 @@ window.CliqueDemo = window.CliqueDemo || (function(){
           }
         },
         mounted() {
+          // Load Work Examples File
+          let vm = this
+          let type = 'GET'
+          let url = 'data/examples.yml'
+          let dataType = 'text'
+          let success = (yaml) => {
+            vm.works = YAML.safeLoad(yaml)
+            console.log(vm.works)
+          }
+          $.ajax({ type, url, dataType, success })
+
         },
         computed: {
         },

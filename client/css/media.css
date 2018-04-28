@@ -60,7 +60,7 @@ html, body {
   .header__info__primary__links--close {
     display: flex;
     font-size: 40px;
-    cusor: pointer; }
+    cursor: pointer; }
   .header__callout, .header__action {
     width: 90%;
     padding: 0;

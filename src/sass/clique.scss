@@ -161,4 +161,42 @@ html, body {
   }
 }
 
+.callout {
+  @include callout-layout;
+  @include accent-text;
+  background-color: white;
+  color: #333;
+  display: flex;
+  padding-left: 180px;
+  flex-direction: column;
+  justify-content: center;
+}
+.callout__statement {
+  font-weight: normal;
+  font-size: 48px;
+}
+
+.callout p {
+  font-size: 24px;
+}
+
+.work {
+  display: flex;
+  @include section-layout;
+}
+.work__details {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 140px;
+  justify-content: center;
+}
+.work__details__summary__title {
+  @include body-text;
+  font-size: 60px;
+}
+.work__details__summary__desc {
+  @include accent-text;
+}
 @import 'media';

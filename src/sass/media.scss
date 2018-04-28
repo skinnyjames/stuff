@@ -42,7 +42,7 @@ $breakpoints: (phone: 320px, med: 647px, tablet: 768px, desktop: 1024px);
   .header__info__primary__links--close {
     display: flex;
     font-size: $fs-xlarge;
-    cusor:pointer;
+    cursor: pointer;
   }
   .header__callout,.header__action {
     width: 90%;

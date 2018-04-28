@@ -6,7 +6,6 @@
     <meta content="utf-8" http-equiv="encoding">
     <!-- css -->
     <link rel="stylesheet" href="css/clique.css">
-    
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
     <!-- scripts -->
@@ -56,7 +55,7 @@
         <div class="header__callout">
           <p>
             An award-winning <span class="callout__tag">Digital Strategy</span>, <span class="callout__tag">Design</span>,<br>
-            <span class="callout__tag">Engineering</span> and <span class="callout__tag">Marketing<span> firm.
+            <span class="callout__tag">Engineering</span> and <span class="callout__tag">Marketing</span> firm.
           </p> 
           <div class="header__callout__text">
             <span>Build Something</span>
@@ -65,7 +64,35 @@
         <div class="header__action">
           <i class="fas fa-arrow-down"></i>
         </div>
+      </div><!-- end header -->
+      <div class="callout">
+        <h1 class="callout__statement">We believe the work is what matters.</h1>
+        <p>Here is some of ours</p>
       </div>
+      <!-- start work sections -->
+      <template v-if="works">
+        <clique-work :work="works.lincoln">
+          <!-- image animations and what not here -->
+        </clique-work>
+        <clique-work :work="works.kendall">
+          <!-- image animations and what not here -->
+        </clique-work>
+        <clique-work :work="works.first">
+          <!-- image animations and what not here -->
+        </clique-work>
+        <clique-work :work="works.cnec">
+        </clique-work>
+        <clique-work :work="works.melting">
+        </clique-work>
+        <clique-work :work="works.special">
+        </clique-work>
+        <clique-work :work="works.lori">
+        </clique-work>
+        <clique-work :work="works.retrofit">
+        </clique-work>
+        <clique-work :work="works.viva">
+        </clique-work>
+      </template>
     </div>
     <script>
       CliqueDemo.init({ el: '#clique-app'});
