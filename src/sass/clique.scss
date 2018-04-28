@@ -129,7 +129,7 @@ html, body {
   @include body-text;
   @include declare;
   font-weight: bold;
-  font-size: $fs-large;
+  font-size: 32px;
 }
 .header__callout__text span {
   padding-bottom: .4em;
@@ -243,4 +243,79 @@ html, body {
 .lincoln-evidence {
   margin-bottom: -80px;
 }
+.more {
+  z-index: 3;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px;
+}
+.more__company { 
+  margin: 0px 2px 2px 2px;
+  position: relative;
+}
+.more__company__overlay {
+  z-index:2;
+  width: 100%;
+  height: 100%;
+  position: absolute; 
+  background-color: rgba(255,255,255,.8);
+}
+.more__company:hover .more__company__overlay {
+  background-color: transparent;
+}
+.talk {
+  height: 400px;
+  background-image: url('../img/icons/talkbg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include flex-center;
+  flex-direction: column;
+}
+.talk h1 {
+  color: #333;
+  font-weight: normal;
+  font-size: 48px;
+  @include accent-text;
+}
+.talk__links {
+  display: flex;
+}
+.talk__links a {
+  @include flex-center;
+  @include declare;
+  @include body-text;
+  letter-spacing: .2em;
+  margin: .5em;
+  color: $brand-color;
+  border: 1px solid $brand-color;
+  border-radius: 4px;
+  padding: 1em .5em; 
+  //TODO: get actual width;
+  width: 200px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer {
+  height: 200px;
+  padding: 10px;  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer__text, .footer__media {
+  list-style-type: none;
+  display: flex;
+  color: #767676;
+  font-size: 13px;
+}
+.footer__text li {
+  margin-left: 2em;
+}
+.footer__media li {
+  margin-right: .4em;
+}
+
 @import 'media';

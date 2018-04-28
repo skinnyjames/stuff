@@ -49,14 +49,14 @@ melting:
     mobile strategy to reduce bounce rate by 79%
   logo: img/melting-logo.png
   bg_image: img/melting.png
-  bg_color: rgba(27, 27, 29, 0)
+  bg_color: rgba(27, 27, 29, .8)
 special: 
   id: special
   title: Build Something Charitable
   description: |
     Serving the 5,000 athletes in the 
     Chicago-born Special Olympics
-  bg_color: rgba(214, 57, 64, 0)
+  bg_color: rgba(214, 57, 64, .8)
 lori: 
   id: lori
   title: |
@@ -89,4 +89,4 @@ viva:
     Vivamus ac ultrices augue. Pellentesque
     convallis velit nulla, vitae efficitur massa.
   bg_color: rgba(46, 57, 68, .3)
-  
+more: ['ecotally', 'authetify', 'blue-plate', 'carzell', 'edelson', 'aligned', 'geofeedia', 'varsity', 'edelson2','aligned2', 'geofeedia2', 'varsity2']

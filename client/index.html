@@ -68,12 +68,12 @@
       </div><!-- end header -->
       <div class="callout">
         <h1 class="callout__statement">We believe the work is what matters.</h1>
-        <p>Here is some of ours</p>
+        <p>Here is some of ours.</p>
       </div>
       <!-- start work sections -->
       <template v-if="works">
         <clique-work :work="works.lincoln" @mounted="workMounted">
-          <img class="clique__evidence lincoln-evidence" src="img/cnec-evidence-2.png" data-950="transform: translate(0px, 300px);" data-1100="transform: translate(0px, 0px);">
+          <img class="clique__evidence lincoln-evidence" src="img/lincoln-evidence.png" data-950="transform: translate(0px, 300px);" data-1100="transform: translate(0px, 0px);">
         </clique-work>
         <clique-work :work="works.kendall" @mounted="workMounted">
           <img class="clique__evidence" src="img/kendall-evidence-ipad.png" style="transform: translate(-50px, 200px);">
@@ -85,7 +85,7 @@
           <img class="clique__evidence" src="img/first-evidence-1.png" style="transform: translate(0px, 100px);">
         </clique-work>
         <clique-work :work="works.cnec" @mounted="workMounted">
-          <img class="clique__evidence lincoln-evidence" src="img/cnec-evidence-2.png" data-950="transform: translate(0px, 300px);" data-1100="transform: translate(0px, 0px);">
+          <img class="clique__evidence lincoln-evidence" src="img/cnec-evidence-2.png" data-800="transform: translate(0px, 300px);" data-1100="transform: translate(0px, 0px);">
         </clique-work>
         <clique-work :work="works.melting" @mounted="workMounted">
           <img class="clique__evidence" src="img/melting-evidence.png" style="height: 800px;transform: translate(100px, 300px);">
@@ -101,12 +101,50 @@
           <img class="clique__evidence" src="img/retrofit-evidence-1.png" style="transform: translate(0px, 100px);">
         </clique-work>
         <clique-work :work="works.viva" @mounted="workMounted">
+          <img class="clique__evidence" src="img/viva-evidence.png" style="transform: translate(0px, 100px);">
         </clique-work>
       </template>
+      <div class="more">
+        <div class="more__company" v-for="company in works.more">
+          <div class="more__company__overlay"></div>
+          <img :src="'img/more/' + company + '.png'">
+        </div>
+        
+      </div>
+      <div class="talk">
+        <h1>Talk to a real person.</h1>
+        <div class="talk__links">
+          <a href="#">312-379-9329</a>
+          <a href="#">Message Us</a>
+        </div> 
+      </div>
+      <div class="footer">
+        <ul class="footer__text">
+          <li>&#169; 2015 Clique Studios, LLC.</li>
+          <li>312-379-9329</li>
+          <li>410 S Michigan Ave, Suite 908, Chicago, IL 60605
+        </ul>
+        <ul class="footer__media">
+          <li>
+            <a href="#"><img src="img/icons/fb.png"></a>
+          </li> 
+          <li>
+            <a href="#"><img src="img/icons/yt.png"></a>
+          </li> 
+          <li>
+            <a href="#"><img src="img/icons/flickr.png"></a>
+          </li> 
+          <li>
+            <a href="#"><img src="img/icons/twitter.png"></a>
+          </li> 
+          <li>
+            <a href="#"><img src="img/icons/linkedin.png"></a>
+          </li> 
+        </ul>
+      </div>
     </div>
     <script>
       CliqueDemo.init({ el: '#clique-app'});
-      im.setElement(document.body);
     </script>
   </body>
 </html>
