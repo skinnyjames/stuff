@@ -104,12 +104,11 @@
           <img class="clique__evidence" src="img/viva-evidence.png" style="transform: translate(0px, 100px);">
         </clique-work>
       </template>
-      <div class="more">
+      <div class="more" v-if="works">
         <div class="more__company" v-for="company in works.more">
           <div class="more__company__overlay"></div>
           <img :src="'img/more/' + company + '.png'">
         </div>
-        
       </div>
       <div class="talk">
         <h1>Talk to a real person.</h1>

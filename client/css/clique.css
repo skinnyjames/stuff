@@ -240,7 +240,8 @@ html, body {
   background-color: white;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px; }
+  padding: 100px;
+  margin: 0 auto; }
 
 .more__company {
   margin: 0px 2px 2px 2px;

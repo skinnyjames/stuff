@@ -52,7 +52,10 @@ melting:
   bg_color: rgba(27, 27, 29, .8)
 special: 
   id: special
-  title: Build Something Charitable
+  title: |
+    Build 
+    Something 
+    Charitable
   description: |
     Serving the 5,000 athletes in the 
     Chicago-born Special Olympics
