@@ -148,7 +148,6 @@ html, body {
   padding: 10px;
   border-radius: 3px;
   border: 1px solid $primary-font-color;
-  animation: bounce 1s infinite;
 }
 
 @keyframes bounce {
@@ -247,6 +246,7 @@ html, body {
   z-index: 3;
   background-color: white;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 100px;
   margin: 0 auto;
