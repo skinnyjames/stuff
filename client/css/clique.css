@@ -42,7 +42,7 @@ html, body {
   display: flex;
   flex-direction: column;
   position: relative;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
   text-decoration: none; }
 
@@ -57,6 +57,7 @@ html, body {
   visibility: hidden;
   transform: scaleX(0);
   transition: all .2s ease-in-out 0s;
+  left: 0;
   background-color: #f88601; }
 
 .header__info__primary__links li a:hover:after {
@@ -102,14 +103,14 @@ html, body {
   border-radius: 3px;
   padding: .5em;
   color: #ffffff;
-  font-size: 15px; }
+  font-size: 16px; }
 
 .header__callout {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 20px 140px 0px 140px;
-  height: 360px;
+  height: 330px;
   height: 50%;
   font-size: 60px;
   color: #ffffff;
@@ -139,14 +140,14 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20vh;
+  height: 170px;
   padding: 0px 140px 0px 140px;
   font-size: 20px;
   justify-content: flex-start;
   align-items: center; }
 
 .header__action svg {
-  padding: 10px;
+  padding: 30px;
   border-radius: 3px;
   border: 1px solid #ffffff; }
 
@@ -179,7 +180,9 @@ html, body {
 .work {
   display: flex;
   /*min-height: 515px;*/
-  height: 700px; }
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .work__details {
   width: 50%;
@@ -224,6 +227,9 @@ html, body {
   font-weight: bold; }
 
 .work__evidence {
+  width: 50%;
+  display: flex;
+  justify-content: center;
   position: relative; }
 
 .clique__evidence {

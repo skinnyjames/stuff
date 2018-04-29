@@ -71,13 +71,13 @@
         <p>Here is some of ours.</p>
       </div>
       <!-- start work sections -->
-      <template v-if="works">
+			<template v-if="works">
         <clique-work :work="works.lincoln" @mounted="workMounted">
           <img class="clique__evidence lincoln-evidence" src="img/lincoln-evidence.png" data-950="transform: translate(0px, 300px);" data-1100="transform: translate(0px, 0px);">
         </clique-work>
         <clique-work :work="works.kendall" @mounted="workMounted">
           <img class="clique__evidence" src="img/kendall-evidence-ipad.png" style="transform: translate(-50px, 200px);">
-          <img class="clique__evidence" src="img/kendall-evidence-iphone.png" :style="{'z-index': '2', 'transform': 'translate(300px, -200px)'}">
+          <img class="clique__evidence" src="img/kendall-evidence-iphone.png" :style="{'z-index': '2', 'transform': 'translate(100px, -200px)'}">
         </clique-work>
         <clique-work :work="works.first" @mounted="workMounted">
           <img class="clique__evidence" src="img/first-evidence-3.png" style="transform: translate(300px, 100px);">
@@ -85,7 +85,8 @@
           <img class="clique__evidence" src="img/first-evidence-1.png" style="transform: translate(0px, 100px);">
         </clique-work>
         <clique-work :work="works.cnec" @mounted="workMounted">
-          <img class="clique__evidence lincoln-evidence" src="img/cnec-evidence-2.png" data-800="transform: translate(0px, 300px);" data-1100="transform: translate(0px, 0px);">
+          <img class="clique__evidence lincoln-evidence" src="img/cnec-evidence-2.png" style="transform: translate(250px, 0px);">
+          <img class="clique__evidence lincoln-evidence" src="img/cnec-evidence-1.png" style="transform: translate(100px, 50px);">
         </clique-work>
         <clique-work :work="works.melting" @mounted="workMounted">
           <img class="clique__evidence" src="img/melting-evidence.png" style="height: 800px;transform: translate(100px, 300px);">
@@ -98,7 +99,7 @@
           <img class="clique__evidence" src="img/lori-evidence-1.png" style="transform: translate(0px, 100px);">
         </clique-work>
         <clique-work :work="works.retrofit" @mounted="workMounted">
-          <img class="clique__evidence" src="img/retrofit-evidence-1.png" style="transform: translate(0px, 100px);">
+          <img class="clique__evidence" src="img/retrofit-evidence-1.png" style="transform: translate(150px, 5px);">
         </clique-work>
         <clique-work :work="works.viva" @mounted="workMounted">
           <img class="clique__evidence" src="img/viva-evidence.png" style="transform: translate(0px, 100px);">
